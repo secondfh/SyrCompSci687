@@ -10,19 +10,25 @@
 #include <vector>
 #include <string>
 #include "Exception.h"
+#include <iostream>
 
 using std::vector;
 using std::string;
 
 class Test
 {
-	protected:
-		Exception excpetion;
-		bool pass;
+private:
+	Exception exception;
+	
 
-	public:
-		void run();
-		bool passed();
-		string getException();
+public:
+	explicit Test()
+		:pass{true}
+	{}
+	bool pass;
+	void setResult(bool result);
+	void run();
+	bool passed();
+	string getException();
 };
 

@@ -16,12 +16,12 @@ using std::string;
 
 class TestExecution
 {
-	private:
-		vector<Test*> _tests;
+private:
+	vector<Test*> _tests;
 
-	public:
-		void addTest(Test);
-		void run();
-		string getResults();
+public:
+	void addTest(Test);
+	void run();
+	string getResults();
 };
 

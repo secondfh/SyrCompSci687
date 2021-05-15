@@ -14,12 +14,12 @@ using std::string;
 
 class Exception
 {
-	protected:
-		string _message;
+protected:
+	string _message;
 
-	public:
-		Exception();
-		void setMessage(string);
-		string getMessage();
+public:
+	Exception();
+	void setMessage(string);
+	string getMessage();
 };
 
