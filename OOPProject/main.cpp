@@ -23,6 +23,7 @@ int main()
     int pain = 0;
     bool enemies = true;
     //declare derived classes
+    Test tc01, tc02, tc03;
 
     //build vector of base class pointers that calls derived class objects
 
@@ -49,10 +50,14 @@ int main()
         {
         case 0:
             //run all tests
+            tc01;
+            tc02;
+            tc03;
             //cout the results
             break;
         case 1:
             //run specific test
+            tc01;
             //cout result
             break;
         case 2:
