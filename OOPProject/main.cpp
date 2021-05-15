@@ -23,6 +23,7 @@ int main()
 
     int choice = 0;
     bool result;
+    string exception;
     int count = 0;
 
     //declare derived classes
@@ -31,7 +32,7 @@ int main()
     tc02.setResult(true);
     tc03.setResult(false);
     
-    //Exception exception;
+    Exception exc{};
 
     //build vector of base class pointers that calls derived class objects
 
@@ -78,16 +79,8 @@ int main()
                 cout << "TEST CASE 02 *FAILED*\n";
                 count++;
             }
-            result = tc03.passed();
-            if (result == true)
-            {
-                cout << "TEST CASE 03 PASSED\n";
-            }
-            else
-            {
-                cout << "TEST CASE 03 *FAILED*\n";
-                count++;
-            }
+            //tc03
+            cout << exc.getMessage() << "\n\n";
             
             if (count == 0)
             {
@@ -99,33 +92,63 @@ int main()
             }
             break;
         case 1:
-            //run specific test
-            //tc01;
             result = tc01.passed();
             if (result == true)
             {
-                cout << "TEST CASE PASSED\n\n";
+                cout << "\nTEST CASE 01 PASSED\n\n";
             }
             else
             {
-                cout << "TEST CASE *FAILED*\n\n";
-            }       
-            
+                cout << "\nTEST CASE 01 *FAILED*\n\n";
+            }
             break;
         case 2:
-            //run specific test
-            //cout result
-            cout << "tc02 run\n";
+            result = tc02.passed();
+            if (result == true)
+            {
+                cout << "\nTEST CASE 02 PASSED\n\n";
+            }
+            else
+            {
+                cout << "\nTEST CASE 02 *FAILED*\n\n";
+            }
             break;
         case 3:
-            //run specific test
-            //cout result
-            cout << "tc03 run\n";
+            cout << exc.getMessage() << "\n\n";
             break;
+
         default: //default to run all tests
-            //run all tests
-            //cout the results
-            cout << "all run\n";
+            result = tc01.passed();
+            if (result == true)
+            {
+                cout << "TEST CASE 01 PASSED\n";
+            }
+            else
+            {
+                cout << "TEST CASE 01 *FAILED*\n";
+                count++;
+            }
+            result = tc02.passed();
+            if (result == true)
+            {
+                cout << "TEST CASE 02 PASSED\n";
+            }
+            else
+            {
+                cout << "TEST CASE 02 *FAILED*\n";
+                count++;
+            }
+            //tc03
+            cout << exc.getMessage() << "\n\n";
+
+            if (count == 0)
+            {
+                cout << "ALL TESTS PASSED\n";
+            }
+            else
+            {
+                cout << "\nOVERALL TEST *FAILED*\n\n";
+            }
             break;
         }
 

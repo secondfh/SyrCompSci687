@@ -18,7 +18,9 @@ protected:
 	string _message;
 
 public:
-	Exception();
+	explicit Exception()
+		:_message{"***ERROR: Something bad happened***"}
+	{}
 	void setMessage(string);
 	string getMessage();
 };
